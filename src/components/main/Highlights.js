@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../styles.css';
 
 const dishItems = [
   {
@@ -39,13 +40,13 @@ const Highlights = () => {
   };
 
   return (
-    <section style={highlightsStyle}>
+    <section className="highlights">
       <h2>Specials</h2>
-      <div style={dishContainerStyle}>
+      <div className="dish-container">
         {dishItems.map((dish, index) => (
-          <div key={index} style={dishItemStyle} onClick={() => handleDishClick(dish.name)}>
-            <img src={dish.image} alt={dish.name} style={dishImageStyle} />
-            <div style={dishContentStyle}>
+          <div key={index} className="dish-item" onClick={() => handleDishClick(dish.name)}>
+            <img src={dish.image} alt={dish.name} className="dish-image" />
+            <div className="dish-content">
               <h3>{dish.title}</h3>
               <p>{dish.name}</p>
               <p>{dish.description}</p>
@@ -54,47 +55,9 @@ const Highlights = () => {
           </div>
         ))}
       </div>
-      <button onClick={handleOrderOnlineClick} style={orderOnlineButtonStyle}>Order Online</button>
+      <button onClick={handleOrderOnlineClick} className="order-online-button">Order Online</button>
     </section>
   );
-};
-
-// Styles
-const highlightsStyle = {
-  background: '#fff',
-  padding: '50px 0',
-  textAlign: 'center',
-};
-
-const dishContainerStyle = {
-  display: 'flex',
-  overflowX: 'auto',
-};
-
-const dishItemStyle = {
-  flex: '0 0 auto',
-  margin: '0 10px',
-  cursor: 'pointer',
-};
-
-const dishImageStyle = {
-  width: '100%',
-  height: 'auto',
-  borderRadius: '8px', // Optional: Add border-radius for rounded corners
-};
-
-const dishContentStyle = {
-  marginTop: '10px',
-};
-
-const orderOnlineButtonStyle = {
-  background: '#666',
-  color: '#fff',
-  padding: '10px 20px',
-  fontSize: '16px',
-  border: 'none',
-  cursor: 'pointer',
-  marginTop: '20px',
 };
 
 export default Highlights;

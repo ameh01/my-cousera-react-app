@@ -1,8 +1,8 @@
 import React from 'react';
-import HeroSection from '../main/HeroSection';
-import Highlights from '../main/Highlights';
-import Testimonials from '../main/Testimonials';
-import About from '../main/About';
+import HeroSection from './main/HeroSection';
+import Highlights from './main/Highlights';
+import Testimonials from './main/Testimonals';
+import About from './main/About';
 
 const Main = () => {
   return (

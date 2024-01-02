@@ -1,0 +1,294 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .container {
+    display: grid;
+    grid-template-areas:
+      'nav'
+      'main'
+      'highlights'
+      'testimonials'
+      'about'
+      'footer';
+    grid-template-rows: auto 1fr auto auto auto auto;
+    min-height: 100vh;
+  }
+
+  nav {
+    grid-area: nav;
+    background: #f2f2f2;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;  /* Adjust padding as needed */
+    background: #f2f2f2;  /* Example background color */
+  }
+
+  .logo {
+    max-height: 50px;  /* Adjust max-height as needed */
+  }
+
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 10px;  /* Adjust gap as needed */
+  }
+
+  .nav-list li {
+    margin: 0;
+  }
+
+
+  main {
+    grid-area: main;
+    padding: 20px;
+  }
+
+  footer {
+    grid-area: footer;
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  /* Typography and Color Styles */
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: 40px; /* sub-title */
+    font-weight: normal;
+  }
+
+  h3 {
+    font-size: 18px; /* lead text */
+    font-weight: medium;
+  }
+
+  p {
+    font-size: 16px; /* paragraph text */
+    font-weight: normal;
+    max-width: 65ch;
+    margin: 0 auto;
+  }
+
+  /* Specific section styles */
+  section {
+    margin-bottom: 20px;
+  }
+
+  .highlights,
+  .testimonials,
+  .about {
+    background: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  /* Add more specific styling for individual components within each section */
+
+  /* Highlight text */
+  .highlight-text {
+    font-size: 16px;
+    font-weight: medium;
+    color: #333333;
+  }
+
+  /* Color Palette */
+  :root {
+    --primary-color: #49SE57;
+    --secondary-color: #EE9972;
+    --highlight-color: #EDEFEE;
+  }
+
+  /* Apply colors as needed in your components */
+
+  /* About Section styles */
+
+  .owners-container {
+    display: 'flex';
+    justify-Content: space-around;
+  }
+
+  .owner {
+    flex: '0 0 calc(50% - 20px)';
+    margin: '10px';
+  }
+
+  .owner-image  {
+    width: '100%';
+    height: 'auto';
+    border-Radius: '50%';
+  }
+
+/* Hero Section Styles */
+.hero-section {
+    background: #f2f2f2;
+    padding: 50px 0;
+    text-align: center;
+    color: #333;
+  }
+
+  .content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .text-content {
+    max-width: 600px;
+  }
+
+  .image-container {
+    flex: 1;
+    text-align: right;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+  }
+
+  .book-table-button {
+    background: #666;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Highlights Section styles */
+.highlights {
+    background: #fff;
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  .dish-container {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .dish-item {
+    flex: 0 0 auto;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+
+  .dish-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+  }
+
+  .dish-content {
+    margin-top: 10px;
+  }
+
+  .order-online-button {
+    background: #666;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  /* Testimonials Section styles */
+.testimonials {
+    background: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  .testimonial-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .testimonial {
+    flex: 0 0 calc(33.3333% - 20px);
+    margin: 10px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+
+  .rating {
+    margin-bottom: 10px;
+  }
+
+  .user-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .review {
+    font-size: 16px;
+  }
+
+  /* Footer Section styles */
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .nav {
+    flex: 2;
+  }
+
+  .contact {
+    flex: 1;
+  }
+
+  .social-media {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .copyright {
+    text-align: center;
+    margin-top: 20px;
+  }
+

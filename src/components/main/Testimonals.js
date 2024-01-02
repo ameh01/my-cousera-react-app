@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../styles.css';
 
 const testimonials = [
   {
@@ -18,73 +19,28 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section style={testimonialsStyle}>
+    <section className="testimonials">
       <h2>Testimonials</h2>
-      <div style={testimonialContainerStyle}>
+      <div className="testimonial-container">
         {testimonials.map((testimonial, index) => (
-          <div key={index} style={testimonialStyle}>
-            <div style={ratingStyle}>
+          <div key={index} className="testimonial">
+            <div className="rating">
               {/* Placeholder for star ratings */}
               {[...Array(testimonial.rating)].map((_, i) => (
                 <span key={i}>&#9733;</span>
               ))}
             </div>
-            <div style={userProfileStyle}>
+            <div className="user-profile">
               {/* Placeholder for user profile photo */}
-              <img src={testimonial.photo} alt={`${testimonial.user}'s profile`} style={photoStyle} />
+              <img src={testimonial.photo} alt={`${testimonial.user}'s profile`} className="photo" />
               <p>{testimonial.user}</p>
             </div>
-            <p style={reviewStyle}>{testimonial.review}</p>
+            <p className="review">{testimonial.review}</p>
           </div>
         ))}
       </div>
     </section>
   );
-};
-
-// Styles
-const testimonialsStyle = {
-  background: '#f9f9f9',
-  padding: '50px 0',
-  textAlign: 'center',
-};
-
-const testimonialContainerStyle = {
-  display: 'flex',
-  justifyContent: 'space-around',
-  alignItems: 'center',
-  flexWrap: 'wrap',
-};
-
-const testimonialStyle = {
-  flex: '0 0 calc(33.3333% - 20px)',
-  margin: '10px',
-  padding: '20px',
-  background: '#fff',
-  borderRadius: '8px',
-  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-  textAlign: 'left',
-};
-
-const ratingStyle = {
-  marginBottom: '10px',
-};
-
-const userProfileStyle = {
-  display: 'flex',
-  alignItems: 'center',
-  marginBottom: '10px',
-};
-
-const photoStyle = {
-  width: '40px',
-  height: '40px',
-  borderRadius: '50%',
-  marginRight: '10px',
-};
-
-const reviewStyle = {
-  fontSize: '16px',
 };
 
 export default Testimonials;

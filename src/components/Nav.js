@@ -1,17 +1,17 @@
 import React from 'react';
-import logo192 from '../public/logo192.png'
+// import logo from '../public/logo.svg';
 
 const Nav = () => {
   return (
-    <nav>
-        <img src={logo192} alt="logo" />
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">Reservations</a></li>
-        <li><a href="#">Order online</a></li>
-        <li><a href="#">Login</a></li>
+    <nav className="nav-container">
+      <img src="/Logo.svg" alt="logo" />
+      <ul className="nav-list">
+        <li><button type="button">Home</button></li>
+        <li><button type="button">About</button></li>
+        <li><button type="button">Menu</button></li>
+        <li><button type="button">Reservations</button></li>
+        <li><button type="button">Order online</button></li>
+        <li><button type="button">Login</button></li>
       </ul>
     </nav>
   );
