@@ -25,7 +25,7 @@ body {
 
   .nav-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 10px 20px;  /* Adjust padding as needed */
     background: #f2f2f2;  /* Example background color */
@@ -38,11 +38,17 @@ body {
   .nav-list {
     list-style: none;
     display: flex;
-    gap: 10px;  /* Adjust gap as needed */
+    align-items: center;
+    gap: 70px;  /* Adjust gap as needed */
   }
 
   .nav-list li {
     margin: 0;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: inherit; /* Optionally, set the link color to inherit from the parent */
   }
 
 
@@ -265,8 +271,16 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
+    gap: 30px;  /* Adjust gap as needed */
+  }
+
+  .footer-nav {
+    grid-area: nav;
+    background: #0a0909;
+    padding: 10px 0;
+    text-align: center;
   }
 
   .logo {
@@ -290,5 +304,10 @@ body {
   .copyright {
     text-align: center;
     margin-top: 20px;
+  }
+
+  .footer-link {
+    text-decoration: none;
+    color: #333333; /* Optionally, set the link color to inherit from the parent */
   }
 

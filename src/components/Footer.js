@@ -1,5 +1,5 @@
 import React from 'react';
-// import logo from '../public/logo.svg';
+import { Link } from 'react-router-dom';
 import '../styles.css';
 
 const Footer = () => {
@@ -13,16 +13,16 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="logo">
-          <img src="/logo.svg" alt="Logo" style={{ maxWidth: '100%', height: 'auto' }} />
+          <img src="/Logo.svg" alt="Logo" style={{ maxWidth: '100%', height: 'auto' }} />
         </div>
         <nav className="nav">
           <ul>
-            <li><button type="button">Home</button></li>
-            <li><button type="button">About</button></li>
-            <li><button type="button">Menu</button></li>
-            <li><button type="button">Reservations</button></li>
-            <li><button type="button">Order online</button></li>
-            <li><button type="button">Login</button></li>
+          <li><Link to="/" className="footer-link">Home</Link></li>
+        <li><Link to="/AboutPage" className="footer-link">About</Link></li>
+        <li><Link to="/MenuPage" className="footer-link">Menu</Link></li>
+        <li><Link to="/ReservationsPage" className="footer-link">Reservations</Link></li>
+        <li><Link to="/OrderOnlinePage" className="footer-link">Order online</Link></li>
+        <li><Link to="/LoginPage" className="footer-link">Login</Link></li>
           </ul>
         </nav>
         <div className="contact">

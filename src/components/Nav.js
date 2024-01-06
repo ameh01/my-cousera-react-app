@@ -1,17 +1,22 @@
 import React from 'react';
-// import logo from '../public/logo.svg';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
   return (
     <nav className="nav-container">
-      <img src="/Logo.svg" alt="logo" />
+
       <ul className="nav-list">
-        <li><button type="button">Home</button></li>
-        <li><button type="button">About</button></li>
-        <li><button type="button">Menu</button></li>
-        <li><button type="button">Reservations</button></li>
-        <li><button type="button">Order online</button></li>
-        <li><button type="button">Login</button></li>
+        <li>
+          <Link to="/">
+      <img src="/Logo.svg" alt="logo" />
+      </Link>
+      </li>
+      <li><Link to="/" className="nav-link">Home</Link></li>
+        <li><Link to="/about" className="nav-link">About</Link></li>
+        <li><Link to="/menu" className="nav-link">Menu</Link></li>
+        <li><Link to="/reservations" className="nav-link">Reservations</Link></li>
+        <li><Link to="/order-online" className="nav-link">Order online</Link></li>
+        <li><Link to="/login" className="nav-link">Login</Link></li>
       </ul>
     </nav>
   );
