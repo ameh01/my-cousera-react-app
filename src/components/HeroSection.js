@@ -1,11 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate instead of useHistory
 import '../styles.css';
 
 const HeroSection = () => {
+
+  const navigate = useNavigate(); // Initialize useNavigate
+
   const handleBookTableClick = () => {
     // Implement the logic to navigate to the page for booking a table
     // You can use a routing library or any navigation method of your choice
-    console.log("Redirecting to the booking page...");
+    // Redirect to the ReservationsPage
+    navigate('/reservations'); // Change '/reservations' to the actual path of your ReservationsPage
   };
 
   return (

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import '../styles.css';
 
 const dishItems = [
@@ -57,6 +58,9 @@ const dishItems = [
 ];
 
 const Highlights = () => {
+
+  const navigate = useNavigate(); // Initialize useNavigate
+
   const handleDishClick = (dishName) => {
     // Implement the logic to navigate to the page for the selected dish
     // You can use a routing library or any navigation method of your choice
@@ -66,7 +70,7 @@ const Highlights = () => {
   const handleOrderOnlineClick = () => {
     // Implement the logic to navigate to the order online page
     // You can use a routing library or any navigation method of your choice
-    console.log("Redirecting to Order Online page...");
+    navigate('/order-online'); // Change '/order-online' to the actual path of your OrderOnlinePage
   };
 
   return (
