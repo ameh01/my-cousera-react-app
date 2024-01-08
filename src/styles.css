@@ -71,13 +71,24 @@ body {
     line-height: 1.5;
   }
 
-  h2 {
+  h1 {
     font-size: 40px; /* sub-title */
+    font-weight: normal;
+  }
+
+  h2 {
+    font-size: 30px; /* sub-title */
     font-weight: normal;
   }
 
   h3 {
     font-size: 18px; /* lead text */
+    font-weight: normal;
+    max-width: 65ch;
+  }
+
+  h4 {
+    font-size: 16px; /* lead text */
     font-weight: medium;
   }
 
@@ -98,7 +109,8 @@ body {
   .about {
     background: #f9f9f9;
     padding: 50px 0;
-    text-align: center;
+    text-align: left;
+    overflow: hidden;
   }
 
   /* Add more specific styling for individual components within each section */
@@ -112,7 +124,7 @@ body {
 
   /* Color Palette */
   :root {
-    --primary-color: #49SE57;
+    --primary-color: #495E57;
     --secondary-color: #EE9972;
     --highlight-color: #EDEFEE;
   }
@@ -122,20 +134,53 @@ body {
   /* About Section styles */
 
   .owners-container {
-    display: 'flex';
-    justify-Content: space-around;
+    display: flex;
+    justify-content: flex-end; /* Align items to the end (right) of the container */
+    margin-right: 300px; /* Add some right margin for space */
   }
 
   .owner {
-    flex: '0 0 calc(50% - 20px)';
-    margin: '10px';
+    position: relative;
   }
 
-  .owner-image  {
-    width: '100%';
-    height: 'auto';
-    border-Radius: '50%';
+  .owner-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0; /* Adjust the position as needed */
+    right: -20px; /* Adjust the position as needed */
   }
+
+  .owner p {
+    margin-top: 10px; /* Adjust the margin as needed */
+  }
+
+  /* Image placeholder for Adrian */
+.owner-image:nth-child(1) {
+  right: 0;
+  bottom: -30px; /* Adjust the position as needed */
+}
+
+/* Image placeholder for Mario */
+.owner:nth-child(2) .owner-image {
+  right: -100px; /* Adjust the overlap for the second image */
+  bottom: 100px;
+}
+
+.owner-description {
+  margin-top: 10px; /* Adjust the margin as needed */
+  font-size: 16px; /* paragraph text size */
+  font-weight: normal;
+  max-width: 65ch;
+  margin: 0 auto;
+}
+
+/* Image placeholder for Mario */
+.owner:nth-child(2) .owner-description {
+  right: -200px; /* Adjust the overlap for the second image */
+  bottom: 200px;
+}
 
 /* Hero Section Styles */
 .hero-section {
@@ -175,6 +220,7 @@ body {
     font-size: 16px;
     border: none;
     cursor: pointer;
+    margin-top: 90px;
   }
 
   /* Highlights Section styles */
@@ -186,7 +232,8 @@ body {
 
   .dish-container {
     display: flex;
-    overflow-x: auto;
+    /* overflow-x: hidden; /* Hide horizontal overflow */
+    overflow-x: auto; /* Hide horizontal overflow */
   }
 
   .dish-item {
@@ -197,12 +244,24 @@ body {
 
   .dish-image {
     width: 100%;
-    height: auto;
+    height: 200px; /* Set a fixed height as needed */
+    object-fit: cover; /* Ensure the image covers the specified dimensions */
     border-radius: 8px; /* Optional: Add border-radius for rounded corners */
   }
 
   .dish-content {
     margin-top: 10px;
+  }
+
+  .highlights {
+    position: relative;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
   }
 
   .order-online-button {
@@ -212,7 +271,6 @@ body {
     font-size: 16px;
     border: none;
     cursor: pointer;
-    margin-top: 20px;
   }
 
   /* Testimonials Section styles */
@@ -250,8 +308,8 @@ body {
   }
 
   .photo {
-    width: 40px;
-    height: 40px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     margin-right: 10px;
   }
@@ -271,20 +329,22 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    max-width: 1000px;
+    max-width: 1500px;
     margin: 0 auto;
     gap: 30px;  /* Adjust gap as needed */
   }
 
   .footer-nav {
     grid-area: nav;
-    background: #0a0909;
+    background: #333;
+    color: #fff;
     padding: 10px 0;
     text-align: center;
   }
 
   .logo {
     flex: 1;
+    /* max-height: 180px; /* Adjust max-height as needed */
   }
 
   .nav {
@@ -308,6 +368,76 @@ body {
 
   .footer-link {
     text-decoration: none;
-    color: #333333; /* Optionally, set the link color to inherit from the parent */
+    color: #fff;  /* Optionally, set the link color to inherit from the parent */
+    flex-direction: column;
   }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Optional: Align items to the center */
+    gap: 10px;  /* Adjust the gap as needed */
+  }
+
+  /* Add these styles for the reservation form */
+.reservation-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Add these styles for the ReservationsPage */
+.reservation-page {
+  max-width: 300px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.reservation-page h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.invalid {
+  border-color: red;
+}
+
+/* Add these styles for the submit button */
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style for the disabled state */
+input[type="submit"]:disabled {
+  background-color: #ddd;
+  color: #666;
+  cursor: not-allowed;
+}
+
+
+
 

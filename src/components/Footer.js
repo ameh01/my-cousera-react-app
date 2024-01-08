@@ -15,15 +15,15 @@ const Footer = () => {
         <div className="logo">
           <img src="/Logo.svg" alt="Logo" style={{ maxWidth: '100%', height: 'auto' }} />
         </div>
-        <nav className="nav">
-          <ul>
-          <li><Link to="/" className="footer-link">Home</Link></li>
-        <li><Link to="/AboutPage" className="footer-link">About</Link></li>
-        <li><Link to="/MenuPage" className="footer-link">Menu</Link></li>
-        <li><Link to="/ReservationsPage" className="footer-link">Reservations</Link></li>
-        <li><Link to="/OrderOnlinePage" className="footer-link">Order online</Link></li>
-        <li><Link to="/LoginPage" className="footer-link">Login</Link></li>
-          </ul>
+        <nav className="footer-nav">
+        <div className="footer-links">
+            <Link to="/" className="footer-link">Home</Link>
+            <Link to="/AboutPage" className="footer-link">About</Link>
+            <Link to="/MenuPage" className="footer-link">Menu</Link>
+            <Link to="/ReservationsPage" className="footer-link">Reservations</Link>
+            <Link to="/OrderOnlinePage" className="footer-link">Order online</Link>
+            <Link to="/LoginPage" className="footer-link">Login</Link>
+          </div>
         </nav>
         <div className="contact">
           <p>Contact Us:</p>
@@ -33,13 +33,13 @@ const Footer = () => {
         <div className="social-media">
           {/* Social media buttons */}
           <button type="button" onClick={() => handleSocialMediaClick('Facebook')}>
-            <img src="facebook-icon.png" alt="Facebook" />
+            <img src="facebook-48.png" alt="Facebook" />
           </button>
           <button type="button" onClick={() => handleSocialMediaClick('Twitter')}>
-            <img src="twitter-icon.png" alt="Twitter" />
+            <img src="twitter-48.png" alt="Twitter" />
           </button>
           <button type="button" onClick={() => handleSocialMediaClick('Instagram')}>
-            <img src="instagram-icon.png" alt="Instagram" />
+            <img src="instagram-48.png" alt="Instagram" />
           </button>
         </div>
         <div className="copyright">

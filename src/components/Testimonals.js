@@ -11,7 +11,7 @@ const testimonials = [
   {
     rating: 4,
     user: 'Jane Smith',
-    photo: 'jane-smith-photo.jpg',
+    photo: 'jane smith.jpg',
     review: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
   // Add more testimonials as needed

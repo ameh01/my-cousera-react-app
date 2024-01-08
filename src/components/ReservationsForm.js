@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { fetchAPI } from '../api/api';
+import '../styles.css'; // Import the custom styles
 
 const ReservationsForm = ({ availableTimes, dispatch }) => {
   const [selectedDate, setSelectedDate] = useState('');
@@ -66,15 +67,15 @@ const ReservationsForm = ({ availableTimes, dispatch }) => {
   };
 
   return (
-    <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }} onSubmit={handleSubmit}>
+    <form className="reservation-form" onSubmit={handleSubmit}>
       <label htmlFor="res-date">Choose date</label>
       <input
         type="date"
         id="res-date"
         value={selectedDate}
         onChange={handleDateChange}
-        required // Add HTML5 required attribute
-        className={!isDateValid ? 'invalid' : ''}
+        required
+        className={`form-input ${!isDateValid ? 'invalid' : ''}`}
       />
 
       <label htmlFor="res-time">Choose time</label>
@@ -82,13 +83,13 @@ const ReservationsForm = ({ availableTimes, dispatch }) => {
         id="res-time"
         value={selectedTime}
         onChange={handleTimeChange}
-        required // Add HTML5 required attribute
-        className={!isTimeValid ? 'invalid' : ''}
-        >
+        required
+        className={`form-input ${!isTimeValid ? 'invalid' : ''}`}
+      >
         {availableTimes &&
-        availableTimes.map((time) => (
-        <option key={new Date(time).getTime()}>{new Date(time).toLocaleTimeString()}</option>
-        ))}
+          availableTimes.map((time) => (
+            <option key={new Date(time).getTime()}>{new Date(time).toLocaleTimeString()}</option>
+          ))}
       </select>
 
       <label htmlFor="guests">Number of guests</label>
@@ -100,8 +101,8 @@ const ReservationsForm = ({ availableTimes, dispatch }) => {
         id="guests"
         value={numberOfGuests}
         onChange={handleGuestsChange}
-        required // Add HTML5 required attribute
-        className={!isGuestsValid ? 'invalid' : ''}
+        required
+        className={`form-input ${!isGuestsValid ? 'invalid' : ''}`}
       />
 
       <label htmlFor="occasion">Occasion</label>
@@ -109,7 +110,8 @@ const ReservationsForm = ({ availableTimes, dispatch }) => {
         id="occasion"
         value={occasion}
         onChange={(e) => setOccasion(e.target.value)}
-        required // Add HTML5 required attribute
+        required
+        className="form-input"
       >
         <option value="">Select an occasion</option>
         <option value="Birthday">Birthday</option>

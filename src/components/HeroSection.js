@@ -13,11 +13,12 @@ const HeroSection = () => {
       <div className="content-container">
         <div className="text-content">
           <h1>The Little Lemon</h1>
+          <h2>chicago</h2>
           <p>Located in the heart of the city, offering a delightful culinary experience with a focus on fresh and vibrant flavors.</p>
           <button onClick={handleBookTableClick} className="book-table-button">Book a Table Online</button>
         </div>
         <div className="image-container">
-          <img src="restaurant-image.jpg" alt="Restaurant" className="image" />
+          <img src="restaurant.jpg" alt="Restaurant" className="image" />
         </div>
       </div>
     </section>
