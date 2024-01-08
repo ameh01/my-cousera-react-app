@@ -31,8 +31,22 @@ body {
     background: #f2f2f2;  /* Example background color */
   }
 
+  .menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+  }
+
   .logo {
     max-height: 50px;  /* Adjust max-height as needed */
+    margin-right: 20px ;
   }
 
   .nav-list {
@@ -40,6 +54,28 @@ body {
     display: flex;
     align-items: center;
     gap: 70px;  /* Adjust gap as needed */
+
+  }
+
+  @media only screen and (max-width: 768px) {
+    .menu-icon {
+      display: flex;
+    }
+
+    .nav-list {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: #f2f2f2;
+      z-index: 1;
+    }
+
+    .nav-list.open {
+      display: flex;
+    }
   }
 
   .nav-list li {
@@ -136,7 +172,7 @@ body {
   .owners-container {
     display: flex;
     justify-content: flex-end; /* Align items to the end (right) of the container */
-    margin-right: 300px; /* Add some right margin for space */
+    margin-right: 15%; /* Add some right margin for space */
   }
 
   .owner {
@@ -164,8 +200,8 @@ body {
 
 /* Image placeholder for Mario */
 .owner:nth-child(2) .owner-image {
-  right: -100px; /* Adjust the overlap for the second image */
-  bottom: 100px;
+  right: -250%; /* Adjust the overlap for the second image */
+  bottom: 250%;
 }
 
 .owner-description {
@@ -178,8 +214,8 @@ body {
 
 /* Image placeholder for Mario */
 .owner:nth-child(2) .owner-description {
-  right: -200px; /* Adjust the overlap for the second image */
-  bottom: 200px;
+  right: -15%; /* Adjust the overlap for the second image */
+  bottom: 15%;
 }
 
 /* Hero Section Styles */

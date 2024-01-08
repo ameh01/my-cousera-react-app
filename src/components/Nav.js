@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Nav = () => {
-  return (
-    <nav className="nav-container">
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
-      <ul className="nav-list">
-        <li>
-          <Link to="/">
-      <img src="/Logo.svg" alt="logo" />
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
+  return (
+    <nav className={`nav-container ${isMenuOpen ? 'open' : ''}`}>
+      <Link to="/">
+        <img src="/Logo.svg" alt="logo" className="logo" />
       </Link>
-      </li>
-      <li><Link to="/" className="nav-link">Home</Link></li>
+      <div className={`menu-icon ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </div>
+      <ul className={`nav-list ${isMenuOpen ? 'open' : ''}`}>
+        <li><Link to="/" className="nav-link">Home</Link></li>
         <li><Link to="/about" className="nav-link">About</Link></li>
         <li><Link to="/menu" className="nav-link">Menu</Link></li>
         <li><Link to="/reservations" className="nav-link">Reservations</Link></li>
